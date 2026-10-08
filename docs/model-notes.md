@@ -14,7 +14,7 @@ Hash it and inspect before trusting. Avoid first run on a main phone (past llama
 - `text` + `[SEP]` -> formatted text. Server tokenizes `[SEP]` as the single id 4.
 - Speed on GTX 1660 SUPER: ~666 t/s generation.
 - With BOS: output truncated to first words or looping ("Вчера." x256). Without BOS: `вчера я был на работе и очень устал` -> `Вчера я был на работе и очень устал.`
-- Last observed regression: four test sentences returned 1 token (EOS) in a PowerShell loop. Suspected causes: `ConvertTo-Json` default depth 2 mangling the `prompt` array, or KV-cache reuse between requests (try `cache_prompt: false`). `scripts/correct.py` avoids both.
+- POSTPONED (by user decision): last observed regression: four test sentences returned 1 token (EOS) in a PowerShell loop. Suspected causes: `ConvertTo-Json` default depth 2 mangling the `prompt` array, or KV-cache reuse between requests (try `cache_prompt: false`). `scripts/correct.py` avoids both.
 
 ## Open questions
 1. Does it fix typos (`дила`->`дела`) or only case/punctuation/spaces?

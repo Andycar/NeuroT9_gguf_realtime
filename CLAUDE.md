@@ -12,6 +12,7 @@ User communicates in Russian; docs/notes may be Russian, code and identifiers in
 - Unverified: typo correction, yo-restoration, glued words, long multi-sentence input (split by sentence if needed).
 
 ## Layout
+- `app/` – Android app (package `com.neurot9.app`): `CorrectActivity` (PROCESS_TEXT, Translucent theme because NoDisplay must finish before onResume returns), `LlamaClient`, `MainActivity`. No Android SDK in the cloud sandbox, so it cannot be built there.
 - `scripts/correct.py` – stdlib-only client for llama-server `/completion`.
 - `scripts/probe.py` – runs the open-question test set against a running server (user is on Windows, PowerShell 7).
 - `docs/model-notes.md` – findings and open questions.
